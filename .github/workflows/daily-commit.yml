@@ -1,0 +1,45 @@
+name: Daily Engineering Note
+
+on:
+  schedule:
+    # Runs every day at 18:00 UTC (20:00 CEST / 19:00 CET) in GitHub's cloud.
+    # If the local Antigravity scheduled automation already pushed a commit earlier today,
+    # this workflow detects it and exits cleanly. If the PC was turned off, this workflow
+    # generates and commits today's engineering note automatically.
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-note:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+
+      - name: Check if commit already pushed today & generate fallback note if needed
+        run: |
+          TODAY=$(date -u +"%Y-%m-%d")
+          COMMITS_TODAY=$(git log --since="${TODAY}T00:00:00Z" --oneline | wc -l)
+          if [ "$COMMITS_TODAY" -gt 0 ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Commit already exists for ${TODAY}. Local Antigravity automation already ran today!"
+            exit 0
+          fi
+
+          chmod +x scripts/generate-daily-note.sh
+          ./scripts/generate-daily-note.sh
+
+          if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Already up to date for ${TODAY}."
+            exit 0
+          fi
+
+          git config user.name "Michael Bechaalani"
+          git config user.email "michaelbechaalani1@gmail.com"
+          git add notes/ README.md
+          git commit -m "docs(notes): add daily engineering note for ${TODAY}"
+          git push origin main
