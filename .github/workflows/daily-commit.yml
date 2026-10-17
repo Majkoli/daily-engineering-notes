@@ -2,10 +2,9 @@ name: Daily Engineering Note
 
 on:
   schedule:
-    # Runs every day at 18:00 UTC (20:00 CEST / 19:00 CET) in GitHub's cloud.
-    # If the local Antigravity scheduled automation already pushed a commit earlier today,
-    # this workflow detects it and exits cleanly. If the PC was turned off, this workflow
-    # generates and commits today's engineering note automatically.
+    # Runs every day at 08:00 UTC (10:00 CEST) and 18:00 UTC (20:00 CEST) in GitHub's cloud.
+    # If a commit already exists for today, it exits cleanly. If not, it generates and commits today's note.
+    - cron: '0 8 * * *'
     - cron: '0 18 * * *'
   workflow_dispatch:
 
