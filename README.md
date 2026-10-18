@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-10-18** | [The Transactional Outbox Pattern for Reliable Event Publishing](notes/2026-10-18-transactional-outbox-pattern.md) | Distributed Systems |
 | **2026-10-17** | [Idempotency Keys with SHA-256 Payload Fingerprinting in Distributed APIs](notes/2026-10-17-idempotency-key-sha256-fingerprinting.md) | API Design & Distributed Systems |
 | **2026-10-16** | [PostgreSQL `SELECT ... FOR UPDATE` vs. Optimistic `@Version` Locking in High-Contention Workflows](notes/2026-10-16-postgresql-select-for-update-vs-optimistic-locking.md) | Database & Concurrency |
 
