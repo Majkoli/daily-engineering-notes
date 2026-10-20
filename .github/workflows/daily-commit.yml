@@ -2,9 +2,12 @@ name: Daily Engineering Note
 
 on:
   schedule:
-    # Runs every day at 08:00 UTC (10:00 CEST) and 18:00 UTC (20:00 CEST) in GitHub's cloud.
-    # If a commit already exists for today, it exits cleanly. If not, it generates and commits today's note.
+    # Runs 3 times daily in GitHub's cloud:
+    # - 08:00 UTC (10:00 CEST): Commit #1 (always runs if no commit today)
+    # - 13:00 UTC (15:00 CEST): Commit #2 (runs if today's weighted random target is 2 or 3)
+    # - 18:00 UTC (20:00 CEST): Commit #3 / Catch-up (ensures full daily random target of 1, 2, or 3 commits is met)
     - cron: '0 8 * * *'
+    - cron: '0 13 * * *'
     - cron: '0 18 * * *'
   workflow_dispatch:
 
@@ -18,27 +21,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 10
+          fetch-depth: 20
 
-      - name: Check if commit already pushed today & generate fallback note if needed
+      - name: Generate and push daily commit(s) based on weighted random target (1-3/day)
         run: |
-          TODAY=$(date -u +"%Y-%m-%d")
-          COMMITS_TODAY=$(git log --since="${TODAY}T00:00:00Z" --oneline | wc -l)
-          if [ "$COMMITS_TODAY" -gt 0 ] && [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "Commit already exists for ${TODAY}. Local Antigravity automation already ran today!"
-            exit 0
-          fi
-
           chmod +x scripts/generate-daily-note.sh
-          ./scripts/generate-daily-note.sh
-
-          if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
-            echo "Already up to date for ${TODAY}."
-            exit 0
+          HOUR=$(date -u +"%H")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$HOUR" -ge 17 ]; then
+            ./scripts/generate-daily-note.sh catchup
+          else
+            ./scripts/generate-daily-note.sh step
           fi
 
-          git config user.name "Michael Bechaalani"
-          git config user.email "michaelbechaalani1@gmail.com"
-          git add notes/ README.md
-          git commit -m "docs(notes): add daily engineering note for ${TODAY}"
-          git push origin main
+          if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+            git push origin main
+          else
+            echo "No new commits needed for this window."
+          fi
