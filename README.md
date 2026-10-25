@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-10-25** | [Zero-Downtime PostgreSQL Schema Migrations with Flyway](notes/2026-10-25-flyway-zero-downtime-migrations.md) | Database Engineering |
 | **2026-10-24** | [Java 21 Virtual Threads: Avoiding Carrier Thread Pinning with ReentrantLock](notes/2026-10-24-java-21-virtual-threads-pinning.md) | Java 21 & Concurrency |
 | **2026-10-23** | [Injecting java.time.Clock for 100% Deterministic Time-Based Tests](notes/2026-10-23-clock-injection-deterministic-tests.md) | Testing & Quality |
 | **2026-10-22** | [Migrating from RestTemplate to Spring 6 Synchronous RestClient](notes/2026-10-22-restclient-spring-boot-32.md) | Spring Boot Internals |
