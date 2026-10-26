@@ -12,3 +12,11 @@ Spring's `@Transactional` relies on AOP proxies. Calling a `@Transactional(propa
 ## Key Checklist
 - Verify behavior under concurrent load and failure injection.
 - Keep transaction scopes minimal and observability metrics explicit.
+
+---
+
+## Production Implementation Notes
+
+1. **Boundary Validation:** Enforce invariants at the API and persistence boundaries using explicit constraints rather than relying solely on caller discipline.
+2. **Observability:** Emit structured logs with correlation IDs and Micrometer counters for both happy-path transitions and rejected/retried edge cases.
+3. **Failure Recovery:** Ensure every state transition is either atomic or safely idempotent when re-executed by a background reconciler.
