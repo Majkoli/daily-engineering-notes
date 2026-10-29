@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-10-29** | [Immutable DTOs with Java Records and Jakarta Bean Validation](notes/2026-10-29-java-records-and-bean-validation.md) | Java 21 & API Design |
 | **2026-10-28** | [High-Throughput Job Queues in PostgreSQL Using FOR UPDATE SKIP LOCKED](notes/2026-10-28-postgresql-skip-locked-work-queues.md) | Database & Concurrency |
 | **2026-10-27** | [SHA-256 Request Fingerprinting for Strict Idempotency Guarantees](notes/2026-10-27-idempotency-key-fingerprinting.md) | API Design |
 | **2026-10-26** | [Spring @Transactional Self-Invocation and Propagation Pitfalls](notes/2026-10-26-spring-transaction-propagation-pitfalls.md) | Spring Boot Internals |
