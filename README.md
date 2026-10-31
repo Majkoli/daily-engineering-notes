@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-10-31** | [HikariCP Connection Pool Sizing: Why Smaller Pools Outperform Larger Ones](notes/2026-10-31-hikaricp-connection-pool-sizing.md) | Database & Performance |
 | **2026-10-30** | [Circuit Breaker State Machine: Closed, Open, and Half-Open Tuning](notes/2026-10-30-circuit-breaker-state-transitions.md) | Resilience & Fault Tolerance |
 | **2026-10-29** | [Immutable DTOs with Java Records and Jakarta Bean Validation](notes/2026-10-29-java-records-and-bean-validation.md) | Java 21 & API Design |
 | **2026-10-28** | [High-Throughput Job Queues in PostgreSQL Using FOR UPDATE SKIP LOCKED](notes/2026-10-28-postgresql-skip-locked-work-queues.md) | Database & Concurrency |
