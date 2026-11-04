@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-04** | [Zero-Dropped-Request Graceful Shutdown in Spring Boot and Kubernetes](notes/2026-11-04-graceful-shutdown-spring-boot.md) | Cloud Native & Operations |
 | **2026-11-03** | [PostgreSQL Partial Indexes for Hot-State Queries](notes/2026-11-03-postgres-partial-indexes.md) | Database Engineering |
 | **2026-11-02** | [Exhaustive Domain State Modeling with Java Sealed Interfaces and Pattern Matching](notes/2026-11-02-sealed-interfaces-domain-modeling.md) | Java 21 & Architecture |
 | **2026-11-01** | [Structured Concurrency in Java 21: Scoped Task Lifecycles and Cancellation](notes/2026-11-01-structured-concurrency-java-21.md) | Java 21 & Concurrency |
