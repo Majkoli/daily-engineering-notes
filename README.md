@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-06** | [Standardized API Error Responses with RFC 9457 Problem Details in Spring Boot 3](notes/2026-11-06-problem-details-rfc-9457.md) | API Design |
 | **2026-11-05** | [Distributed Request Tracing with SLF4J MDC and Correlation IDs](notes/2026-11-05-mdc-correlation-ids-observability.md) | Observability & Operations |
 | **2026-11-04** | [Zero-Dropped-Request Graceful Shutdown in Spring Boot and Kubernetes](notes/2026-11-04-graceful-shutdown-spring-boot.md) | Cloud Native & Operations |
 | **2026-11-03** | [PostgreSQL Partial Indexes for Hot-State Queries](notes/2026-11-03-postgres-partial-indexes.md) | Database Engineering |
