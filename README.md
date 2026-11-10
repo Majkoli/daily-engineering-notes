@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-10** | [Immutable Double-Entry Ledger Design for Financial Systems](notes/2026-11-10-double-entry-ledger-immutability.md) | Fintech & Architecture |
 | **2026-11-09** | [Token Bucket vs. Sliding Window Rate Limiting at the API Edge](notes/2026-11-09-rate-limiting-token-bucket.md) | Security & APIs |
 | **2026-11-08** | [Fast Integration Testing with Singleton Testcontainers in Spring Boot](notes/2026-11-08-testcontainers-reusable-singletons.md) | Testing & Quality |
 | **2026-11-07** | [Preventing Lock-Ordering Deadlocks in Multi-Row PostgreSQL Updates](notes/2026-11-07-optimistic-vs-pessimistic-deadlocks.md) | Database & Concurrency |
