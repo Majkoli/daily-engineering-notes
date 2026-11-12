@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-12** | [Token Bucket vs. Sliding Window Rate Limiting at the API Edge](notes/2026-11-12-rate-limiting-token-bucket.md) | Security & APIs |
 | **2026-11-11** | [Idempotent Kafka Consumers: Handling Duplicate Delivery After Rebalances](notes/2026-11-11-kafka-consumer-idempotency.md) | Distributed Systems |
 | **2026-11-10** | [Immutable Double-Entry Ledger Design for Financial Systems](notes/2026-11-10-double-entry-ledger-immutability.md) | Fintech & Architecture |
 | **2026-11-09** | [Token Bucket vs. Sliding Window Rate Limiting at the API Edge](notes/2026-11-09-rate-limiting-token-bucket.md) | Security & APIs |
