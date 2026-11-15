@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-15** | [Generational ZGC in Java 21 for Sub-Millisecond Pause Times](notes/2026-11-15-jvm-zgc-generational-low-latency.md) | Java 21 & Performance |
 | **2026-11-14** | [Idempotent Kafka Consumers: Handling Duplicate Delivery After Rebalances](notes/2026-11-14-kafka-consumer-idempotency.md) | Distributed Systems |
 | **2026-11-13** | [Immutable Double-Entry Ledger Design for Financial Systems](notes/2026-11-13-double-entry-ledger-immutability.md) | Fintech & Architecture |
 | **2026-11-12** | [Token Bucket vs. Sliding Window Rate Limiting at the API Edge](notes/2026-11-12-rate-limiting-token-bucket.md) | Security & APIs |
