@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-17** | [Injecting java.time.Clock for 100% Deterministic Time-Based Tests](notes/2026-11-17-clock-injection-deterministic-tests.md) | Testing & Quality |
 | **2026-11-16** | [Migrating from RestTemplate to Spring 6 Synchronous RestClient](notes/2026-11-16-restclient-spring-boot-32.md) | Spring Boot Internals |
 | **2026-11-15** | [Generational ZGC in Java 21 for Sub-Millisecond Pause Times](notes/2026-11-15-jvm-zgc-generational-low-latency.md) | Java 21 & Performance |
 | **2026-11-14** | [Idempotent Kafka Consumers: Handling Duplicate Delivery After Rebalances](notes/2026-11-14-kafka-consumer-idempotency.md) | Distributed Systems |
