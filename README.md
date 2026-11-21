@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-21** | [Constant-Time HMAC-SHA256 Signature Verification for Webhooks](notes/2026-11-21-hmac-sha256-constant-time-verification.md) | Security & APIs |
 | **2026-11-20** | [Exponential Backoff with Full Jitter for Upstream API Resilience](notes/2026-11-20-exponential-backoff-full-jitter.md) | Resilience & Fault Tolerance |
 | **2026-11-19** | [The Transactional Outbox Pattern for Reliable Event Publishing](notes/2026-11-19-transactional-outbox-pattern.md) | Distributed Systems |
 | **2026-11-18** | [Java 21 Virtual Threads: Avoiding Carrier Thread Pinning with ReentrantLock](notes/2026-11-18-java-21-virtual-threads-pinning.md) | Java 21 & Concurrency |
