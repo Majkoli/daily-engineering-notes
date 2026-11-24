@@ -8,6 +8,7 @@ A curated daily log of backend engineering deep-dives, **Java 21**, **Spring Boo
 
 | Date | Topic | Category |
 | :--- | :--- | :--- |
+| **2026-11-24** | [SHA-256 Request Fingerprinting for Strict Idempotency Guarantees](notes/2026-11-24-idempotency-key-fingerprinting.md) | API Design |
 | **2026-11-23** | [Spring @Transactional Self-Invocation and Propagation Pitfalls](notes/2026-11-23-spring-transaction-propagation-pitfalls.md) | Spring Boot Internals |
 | **2026-11-22** | [Zero-Downtime PostgreSQL Schema Migrations with Flyway](notes/2026-11-22-flyway-zero-downtime-migrations.md) | Database Engineering |
 | **2026-11-21** | [Constant-Time HMAC-SHA256 Signature Verification for Webhooks](notes/2026-11-21-hmac-sha256-constant-time-verification.md) | Security & APIs |
